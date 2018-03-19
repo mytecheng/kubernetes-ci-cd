@@ -14,11 +14,11 @@ node {
 
     stage ("Build") {
 
-        sh "whoami; /bin/sudo docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
+        sh "whoami; ls -l /bin; ls -l /usr/local/bin; docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     }
     stage ("Push") {
 
-        sh "/bin/sudo docker push ${imageName}"
+        sh "docker push ${imageName}"
     }
     stage ("Deploy") {
 
