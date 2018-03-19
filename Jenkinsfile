@@ -14,7 +14,7 @@ node {
 
     stage ("Build") {
 
-        sh "whoami; cat /etc/group; ls -l /var/run/docker.sock; docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
+        sh "whoami; cat /etc/group; groups jenkins; ls -l /var/run/docker.sock; docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     }
     stage ("Push") {
 
