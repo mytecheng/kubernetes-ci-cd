@@ -14,7 +14,7 @@ node {
 
     stage ("Build") {
 
-        sh "sudo docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
+        sh "whoami; sudo docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     }
     stage ("Push") {
 
