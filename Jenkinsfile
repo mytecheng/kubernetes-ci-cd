@@ -14,7 +14,7 @@ node {
 
     stage ("Build") {
 
-        sh "whoami; find / -name sudo -ls; ls -l /var/run/docker.sock; docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
+        sh "whoami; su -; whoami; ls -l /var/run/docker.sock; docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     }
     stage ("Push") {
 
